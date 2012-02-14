@@ -1,1 +1,3 @@
---colour
+# /.rspec
+--format nested
+--color
