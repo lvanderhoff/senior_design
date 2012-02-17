@@ -11,7 +11,12 @@
       <section class="round">
         <%= yield %>
       </section>
+      <% flash.each do |key, value| -%>
+      <div class="flash <%= key %>"><%= value %></div>
+   		<% end -%>
+
       <%= render 'layouts/footer' %>
     </div>
+    
   </body>
 </html>

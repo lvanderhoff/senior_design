@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/jeremyolliver/annotate_models.git
+  revision: 4d57e4fe6360125f17886168120a48091a268e45
+  branch: rake_compatibility
+  specs:
+    annotate (2.4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -36,6 +43,7 @@ GEM
       sys-uname
     autotest-growl (0.2.16)
     autotest-rails-pure (4.1.2)
+    bcrypt-ruby (3.0.1)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -136,10 +144,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   autotest (= 4.4.6)
   autotest-fsevent (= 0.2.4)
   autotest-growl (= 0.2.16)
   autotest-rails-pure (= 4.1.2)
+  bcrypt-ruby (= 3.0.1)
   coffee-rails (~> 3.2.1)
   factory_girl_rails (= 1.0)
   jquery-rails
