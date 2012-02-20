@@ -6,39 +6,43 @@ gem 'bcrypt-ruby', '3.0.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', '1.3.5'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails', '~> 3.2.2'
+  gem 'uglifier', '>= 1.2.3'
+end
+
+gem 'jquery-rails', '2.0.0'
 
 group :development do
-  gem 'rspec', '>=2.0.1'
-  gem 'rspec-rails', '2.6.1'
+  gem 'sqlite3', '1.3.5'
+  gem 'rspec-rails', '2.8.1'
+  gem 'guard-rspec', '0.5.5'
   gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
-  gem 'webrat', '0.7.1'
-  gem 'factory_girl_rails', '1.0'
 end
 
 group :test do
-  gem 'rspec-rails', '2.6.1'
-  gem 'webrat', '0.7.1'
-  gem 'autotest', '4.4.6'
-  gem 'autotest-rails-pure', '4.1.2'
-  gem 'autotest-fsevent', '0.2.4'
-  gem 'autotest-growl', '0.2.16'
+  gem 'rspec-rails', '2.8.1'
+  gem 'capybara', '1.1.2'
+  gem 'rb-fsevent', '0.4.3.1', :require => false
+  gem 'growl', '1.0.3'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
+  gem 'ZenTest'
+  gem 'factory_girl_rails', '1.4.0'
 end
+
+# group :production do
+# 	gem 'pg', '0.12.2'
+# end
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
-  gem 'uglifier', '>= 1.0.3'
-end
 
-gem 'jquery-rails'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,9 +1,23 @@
 require 'autotest/growl'
 require 'autotest/fsevent'
-require 'autotest/bundler'
 
 Autotest.add_hook :initialize do |autotest|
-  autotest.add_mapping(/^spec\/requests\/.*_spec\.rb$/) do
-    autotest.files_matching(/^spec\/requests\/.*_spec\.rb$/)
-  end  
+autotest.add_mapping(/^spec\/integration\/.*_spec\.rb$/) do|filename, _|
+filename
 end
+autotest.add_mapping(/^spec\/(controllers|helpers|lib|models|views)\/.*_spec\.rb$/) do|filename, _|
+filename
+end
+end 
+
+# Autotest.add_hook :initialize do |autotest|
+#   autotest.add_mapping(/^spec\/requests\/.*_spec\.rb$/) do
+#     autotest.files_matching(/^spec\/requests\/.*_spec\.rb$/)
+#   end  
+# end
+
+# Skip some paths
+# Autotest.add_hook :initialize do |autotest|
+#   %w{.git .DS_Store ._* vendor}.each { |exception| autotest.add_exception(exception) }
+#   false
+# end
