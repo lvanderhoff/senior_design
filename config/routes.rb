@@ -1,6 +1,8 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
+  get "pages/home"
+  get "pages/about"
+  get "pages/newcheckout"
+  get "pages/mailinglist"
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -10,9 +12,10 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
   
   
-  match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
-  match '/help',    :to => 'pages#help'
+  match '/newcheckout', :to => 'pages#newcheckout'
+  match '/mailinglist', :to => 'pages#mailinglist'
+  
   
   root :to => 'pages#home'
 
