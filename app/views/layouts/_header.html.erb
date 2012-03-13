@@ -7,8 +7,9 @@
           <li><%= link_to "Home", root_path %></li>
 			  <% if signed_in? %>
 				<li><%= link_to "New Checkout", newcheckout_path %></li>
-				<li><%= link_to "Mailing List", mailinglist_path %></li>
-				
+				<% if current_user.email == "manager@restaurant.com" %>
+					<li><%= link_to "Mailing List", mailinglist_path %></li>
+				<% end %>
 			  <% end %>
 			  <% if signed_in? %>
 				<li><%= link_to "Sign out", signout_path, method: :delete %></li>
