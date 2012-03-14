@@ -7,6 +7,13 @@ SampleApp::Application.routes.draw do
   get "pages/about"
   get "pages/newcheckout"
   get "pages/mailinglist"
+  get "pages/bill"
+  get "pages/payment"
+  get "pages/processed"
+  get "pages/credittotal"
+  get "pages/spliteven"
+  get "pages/remaining"
+  get "pages/choose"
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
