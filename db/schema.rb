@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120220023222) do
+ActiveRecord::Schema.define(:version => 20120314004623) do
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.integer  "unpaidquant"
+    t.integer  "diner1q"
+    t.integer  "diner2q"
+    t.integer  "diner3q"
+    t.integer  "diner4q"
+    t.integer  "diner5q"
+    t.integer  "diner6q"
+    t.integer  "diner7q"
+    t.integer  "diner8q"
+    t.integer  "diner9q"
+    t.integer  "diner10q"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

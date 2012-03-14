@@ -1,0 +1,47 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Unpaidquant</th>
+    <th>Diner1q</th>
+    <th>Diner2q</th>
+    <th>Diner3q</th>
+    <th>Diner4q</th>
+    <th>Diner5q</th>
+    <th>Diner6q</th>
+    <th>Diner7q</th>
+    <th>Diner8q</th>
+    <th>Diner9q</th>
+    <th>Diner10q</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.price %></td>
+    <td><%= item.unpaidquant %></td>
+    <td><%= item.diner1q %></td>
+    <td><%= item.diner2q %></td>
+    <td><%= item.diner3q %></td>
+    <td><%= item.diner4q %></td>
+    <td><%= item.diner5q %></td>
+    <td><%= item.diner6q %></td>
+    <td><%= item.diner7q %></td>
+    <td><%= item.diner8q %></td>
+    <td><%= item.diner9q %></td>
+    <td><%= item.diner10q %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item', new_item_path %>

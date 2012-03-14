@@ -1,0 +1,69 @@
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :unpaidquant %><br />
+    <%= f.number_field :unpaidquant %>
+  </div>
+  <div class="field">
+    <%= f.label :diner1q %><br />
+    <%= f.number_field :diner1q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner2q %><br />
+    <%= f.number_field :diner2q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner3q %><br />
+    <%= f.number_field :diner3q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner4q %><br />
+    <%= f.number_field :diner4q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner5q %><br />
+    <%= f.number_field :diner5q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner6q %><br />
+    <%= f.number_field :diner6q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner7q %><br />
+    <%= f.number_field :diner7q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner8q %><br />
+    <%= f.number_field :diner8q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner9q %><br />
+    <%= f.number_field :diner9q %>
+  </div>
+  <div class="field">
+    <%= f.label :diner10q %><br />
+    <%= f.number_field :diner10q %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
