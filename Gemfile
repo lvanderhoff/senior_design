@@ -29,7 +29,7 @@ end
 group :test do
   gem 'rspec-rails', '2.8.1'
   gem 'capybara', '1.1.2'
-  gem 'rb-fsevent', '0.9', :require => false
+ # gem 'rb-fsevent', '0.9', :require => false
   gem 'growl', '1.0.3'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
