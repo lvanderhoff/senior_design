@@ -1,19 +1,51 @@
 <h1>RESTAURANT</h1>
-<p>
+<h2> Restaurant Contact Info </h2>
+<h4>
 Server: 
-</p>
-
-<table>
+</h4>
+<p>
+<table class = "table">
 <% @items.each do |item| %>
   <tr>
+  	<% if item.quantunpaid%1 == 0%>
+  		<td><%= Integer(item.quantunpaid) %></td>
+  	<% else %>
+  		<td><%= item.quantunpaid %></td>
+  	<% end %>
     <td><%= item.name %></td>
     <td><%= item.price %></td>
-    <td><%= item.quantunpaid %></td>
+<!-- 
+    <td>
+			<input class="btn" type="button"
+         		value="Select">
+    </td>
+ -->
+    
 
+<!-- 
     <td><%= link_to 'Show', item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+ -->
   </tr>
 <% end %>
 </table>
+</p>
+
+<p>
+	 <footer class="footer">
+		   <nav class="round">
+			   <div class="btn-toolbar">
+			   <div class="btn-group">
+				   <button class="btn" type="submit">
+				   		Pay all
+				   <button class="btn" type="submit">
+				   		Split equally
+				   <button class="btn" type="submit">
+				   		Pay for individual items
+			   </div>
+			   </div>
+		   </nav>
+	 </footer>
+</p>
 

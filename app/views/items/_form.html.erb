@@ -1,73 +1,76 @@
-<%= form_for(@item) do |f| %>
-  <% if @item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-      <ul>
-      <% @item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :quantunpaid %><br />
-    <%= f.text_field :quantunpaid %>
-  </div>
-  <div class="field">
-    <%= f.label :d1 %><br />
-    <%= f.text_field :d1 %>
-  </div>
-  <div class="field">
-    <%= f.label :d2 %><br />
-    <%= f.text_field :d2 %>
-  </div>
-  <div class="field">
-    <%= f.label :d3 %><br />
-    <%= f.text_field :d3 %>
-  </div>
-  <div class="field">
-    <%= f.label :d4 %><br />
-    <%= f.text_field :d4 %>
-  </div>
-  <div class="field">
-    <%= f.label :d5 %><br />
-    <%= f.text_field :d5 %>
-  </div>
-  <div class="field">
-    <%= f.label :d6 %><br />
-    <%= f.text_field :d6 %>
-  </div>
-  <div class="field">
-    <%= f.label :d7 %><br />
-    <%= f.text_field :d7 %>
-  </div>
-  <div class="field">
-    <%= f.label :d8 %><br />
-    <%= f.text_field :d8 %>
-  </div>
-  <div class="field">
-    <%= f.label :d9 %><br />
-    <%= f.text_field :d9 %>
-  </div>
-  <div class="field">
-    <%= f.label :d10 %><br />
-    <%= f.text_field :d10 %>
-  </div>
-  <div class="field">
-    <%= f.label :splitInto %><br />
-    <%= f.number_field :splitInto %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+	<%= form_for(@item) do |f| %>
+	  <% if @item.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+	
+		  <ul>
+		  <% @item.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		  <% end %>
+		  </ul>
+		</div>
+	  <% end %>
+	
+	  <div class="field">
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	  </div>
+	  <div class="field">
+		<%= f.label :price %><br />
+		<%= f.text_field :price %>
+	  </div>
+	  <div class="field">
+		<%= f.label :quantunpaid %><br />
+		<%= f.text_field :quantunpaid %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d1 %><br />
+		<%= f.text_field :d1 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d2 %><br />
+		<%= f.text_field :d2 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d3 %><br />
+		<%= f.text_field :d3 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d4 %><br />
+		<%= f.text_field :d4 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d5 %><br />
+		<%= f.text_field :d5 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d6 %><br />
+		<%= f.text_field :d6 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d7 %><br />
+		<%= f.text_field :d7 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d8 %><br />
+		<%= f.text_field :d8 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d9 %><br />
+		<%= f.text_field :d9 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :d10 %><br />
+		<%= f.text_field :d10 %>
+	  </div>
+	  <div class="field">
+		<%= f.label :splitInto %><br />
+		<%= f.number_field :splitInto %>
+	  </div>
+	  <div class="actions">
+		<%= f.submit %>
+	  </div>
+	<% end %>
+</html>

@@ -88,6 +88,8 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (1.2.6)
+      actionpack
     mime-types (1.17.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
@@ -175,6 +177,7 @@ DEPENDENCIES
   guard-rspec (= 0.5.5)
   guard-spork (= 0.3.2)
   jquery-rails (= 2.0.0)
+  meta-tags
   rails (= 3.2.1)
   rspec-rails (= 2.8.1)
   sass-rails (~> 3.2.3)

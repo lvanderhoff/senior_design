@@ -12,10 +12,10 @@
     <p>
   		<center>This is the homepage for restaurant employees. </center>
   		<br><br>
-		<center>Interested in bringing PayFast to your restaurant? </center>
-		<%= link_to "Sign up here!", signup_path, :class => "signup_button round" %>
+		<center>Interested in bringing PayFast to your restaurant? <br>
+		<%= link_to "Sign up here!", signup_path, :class => "btn" %> </center>
 	</p>
-    <div class="container">
+    <div class="container-fluid">
       <%= yield %>
       <%= render 'layouts/footer' %>
     </div>
