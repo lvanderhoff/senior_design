@@ -5,17 +5,18 @@ describe "items/edit" do
     @item = assign(:item, stub_model(Item,
       :name => "MyString",
       :price => "9.99",
-      :unpaidquant => 1,
-      :diner1q => 1,
-      :diner2q => 1,
-      :diner3q => 1,
-      :diner4q => 1,
-      :diner5q => 1,
-      :diner6q => 1,
-      :diner7q => 1,
-      :diner8q => 1,
-      :diner9q => 1,
-      :diner10q => 1
+      :quantunpaid => 1.5,
+      :d1 => 1.5,
+      :d2 => 1.5,
+      :d3 => 1.5,
+      :d4 => 1.5,
+      :d5 => 1.5,
+      :d6 => 1.5,
+      :d7 => 1.5,
+      :d8 => 1.5,
+      :d9 => 1.5,
+      :d10 => 1.5,
+      :splitInto => 1
     ))
   end
 
@@ -26,17 +27,18 @@ describe "items/edit" do
     assert_select "form", :action => items_path(@item), :method => "post" do
       assert_select "input#item_name", :name => "item[name]"
       assert_select "input#item_price", :name => "item[price]"
-      assert_select "input#item_unpaidquant", :name => "item[unpaidquant]"
-      assert_select "input#item_diner1q", :name => "item[diner1q]"
-      assert_select "input#item_diner2q", :name => "item[diner2q]"
-      assert_select "input#item_diner3q", :name => "item[diner3q]"
-      assert_select "input#item_diner4q", :name => "item[diner4q]"
-      assert_select "input#item_diner5q", :name => "item[diner5q]"
-      assert_select "input#item_diner6q", :name => "item[diner6q]"
-      assert_select "input#item_diner7q", :name => "item[diner7q]"
-      assert_select "input#item_diner8q", :name => "item[diner8q]"
-      assert_select "input#item_diner9q", :name => "item[diner9q]"
-      assert_select "input#item_diner10q", :name => "item[diner10q]"
+      assert_select "input#item_quantunpaid", :name => "item[quantunpaid]"
+      assert_select "input#item_d1", :name => "item[d1]"
+      assert_select "input#item_d2", :name => "item[d2]"
+      assert_select "input#item_d3", :name => "item[d3]"
+      assert_select "input#item_d4", :name => "item[d4]"
+      assert_select "input#item_d5", :name => "item[d5]"
+      assert_select "input#item_d6", :name => "item[d6]"
+      assert_select "input#item_d7", :name => "item[d7]"
+      assert_select "input#item_d8", :name => "item[d8]"
+      assert_select "input#item_d9", :name => "item[d9]"
+      assert_select "input#item_d10", :name => "item[d10]"
+      assert_select "input#item_splitInto", :name => "item[splitInto]"
     end
   end
 end

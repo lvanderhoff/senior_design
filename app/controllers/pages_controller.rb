@@ -13,6 +13,7 @@ class PagesController < ApplicationController
   
   def bill
   	@title = "Bill"
+  	@items = Item.all
   end
   
   def payment

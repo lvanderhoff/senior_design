@@ -1,19 +1,44 @@
 <% provide(:title, "Sign in") %>
 <h1>Sign in</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, :url => sessions_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
 
-      <%= f.submit "Sign in", :class => "signup_button round" %>
-    <% end %>
+<head>
+  	<title><%= title %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %> 
+</head>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  </div>
-</div>
+ <body>
+    <%= render 'layouts/header' %>
+    
+    
+    <p>
+			<div class="row">
+		   <div class="span6 offset3">
+			 <%= form_for(:session, :url => sessions_path) do |f| %>
+		 
+			   <%= f.label :email %>
+			   <%= f.text_field :email %>
+		 
+			   <%= f.label :password %>
+			   <%= f.password_field :password %>
+		 
+			   <%= f.submit "Sign in", :class => "signup_button round" %>
+			 <% end %>
+		 
+			 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+		   </div>
+		 </div>
+	</p>
+	
+	
+	
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+</body>

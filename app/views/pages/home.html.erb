@@ -1,14 +1,28 @@
 <h1>Home</h1>
-<p>
-  <center>This is the homepage for restaurant employees. </center>
-</p>
+<head>
+  	<title><%= title %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %> 
+    
+  </head>
+ <body>
+    <%= render 'layouts/header' %>
+    <p>
+  		<center>This is the homepage for restaurant employees. </center>
+  		<br><br>
+		<center>Interested in bringing PayFast to your restaurant? </center>
+		<%= link_to "Sign up here!", signup_path, :class => "signup_button round" %>
+	</p>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+</body>
 
 
 
 
-<center>Interested in bringing PayFast to your restaurant? </center>
 
-
-
-<%= link_to "Sign up here!", signup_path, :class => "signup_button round" %>
 

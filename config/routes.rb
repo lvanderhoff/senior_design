@@ -1,10 +1,11 @@
 SampleApp::Application.routes.draw do
+  resources :customers
   resources :items
 
   get "items/new"
+  get "customers/new"
 
   get "pages/home"
-  get "pages/about"
   get "pages/newcheckout"
   get "pages/mailinglist"
   get "pages/bill"
@@ -23,9 +24,10 @@ SampleApp::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
   
   
-  match '/about',   :to => 'pages#about'
   match '/newcheckout', :to => 'pages#newcheckout'
   match '/mailinglist', :to => 'pages#mailinglist'
+  
+  match '/bill', :to => 'pages#bill'
   
   
   root :to => 'pages#home'

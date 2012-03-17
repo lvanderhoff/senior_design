@@ -11,24 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120314004623) do
+ActiveRecord::Schema.define(:version => 20120316200652) do
+
+  create_table "customers", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.decimal  "purchaseAmount"
+    t.boolean  "cash"
+    t.boolean  "canEmail"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "items", :force => true do |t|
     t.string   "name"
     t.decimal  "price"
-    t.integer  "unpaidquant"
-    t.integer  "diner1q"
-    t.integer  "diner2q"
-    t.integer  "diner3q"
-    t.integer  "diner4q"
-    t.integer  "diner5q"
-    t.integer  "diner6q"
-    t.integer  "diner7q"
-    t.integer  "diner8q"
-    t.integer  "diner9q"
-    t.integer  "diner10q"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.decimal  "quantunpaid", :default => 0.0
+    t.decimal  "d1",          :default => 0.0
+    t.decimal  "d2",          :default => 0.0
+    t.decimal  "d3",          :default => 0.0
+    t.decimal  "d4",          :default => 0.0
+    t.decimal  "d5",          :default => 0.0
+    t.decimal  "d6",          :default => 0.0
+    t.decimal  "d7",          :default => 0.0
+    t.decimal  "d8",          :default => 0.0
+    t.decimal  "d9",          :default => 0.0
+    t.decimal  "d10",         :default => 0.0
+    t.decimal  "splitInto",   :default => 1.0
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "users", :force => true do |t|

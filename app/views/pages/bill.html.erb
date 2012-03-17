@@ -1,0 +1,19 @@
+<h1>RESTAURANT</h1>
+<p>
+Server: 
+</p>
+
+<table>
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.price %></td>
+    <td><%= item.quantunpaid %></td>
+
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+

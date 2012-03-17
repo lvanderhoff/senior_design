@@ -1,5 +1,21 @@
 <h1>Mailing List</h1>
-<p>
-  Here's where the managers will be able to see the mailing list 
-  built from emails entered during the checkout process.
-</p>
+
+<head>
+  	<title><%= title %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %> 
+    
+  </head>
+ <body>
+    <%= render 'layouts/header' %>
+    <p>
+		Here's where the managers will be able to see the mailing list 
+		built from emails entered during the checkout process.
+	</p>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+</body>

@@ -1,25 +1,48 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+<head>
+  	<title><%= title %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %> 
+</head>
+
+ <body>
+    <%= render 'layouts/header' %>
+    
+    
+    <p>
+			<%= form_for(@user) do |f| %>
+		   <%= render 'shared/error_messages' %>
+		   <div class="field">
+			 <%= f.label :name %><br />
+			 <%= f.text_field :name %>
+		   </div>
+		   <div class="field">
+			 <%= f.label :email %><br />
+			 <%= f.text_field :email %>
+		   </div>
+		   <div class="field">
+			 <%= f.label :password %><br />
+			 <%= f.password_field :password %>
+		   </div>
+		   <div class="field">
+			 <%= f.label :password_confirmation, "Confirmation" %><br />
+			 <%= f.password_field :password_confirmation %>
+		   </div>
+		   <div class="actions">
+			 <%= f.submit "Sign up" %>
+		   </div>
+		 <% end %>
+	</p>
+	
+	
+	
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+</body>
+
