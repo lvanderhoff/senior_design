@@ -28,6 +28,13 @@ SampleApp::Application.routes.draw do
   match '/mailinglist', :to => 'pages#mailinglist'
   
   match '/bill', :to => 'pages#bill'
+  match '/payment', :to =>  'pages#payment'
+  match '/processed', :to =>  'pages#processed'
+  match '/credittotal', :to =>  'pages#credittotal'
+  match '/spliteven', :to =>  'pages#spliteven'
+  match '/remaining', :to =>  'pages#remaining'
+  match '/choose', :to =>  'pages#choose'
+  
   
   
   root :to => 'pages#home'

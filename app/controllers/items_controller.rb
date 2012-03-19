@@ -81,7 +81,5 @@ class ItemsController < ApplicationController
     end
   end
   
-  def bill
-  	@items = Item.all
-  end
+
 end
