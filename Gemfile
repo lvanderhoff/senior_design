@@ -38,9 +38,9 @@ group :test do
   gem 'factory_girl_rails', '1.4.0'
 end
 
-# group :production do
-# 	gem 'pg', '0.12.2'
-# end
+ group :production do
+ 	gem 'pg', '0.12.2'
+ end
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
