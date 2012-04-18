@@ -179,7 +179,7 @@ DEPENDENCIES
   guard-spork (= 0.3.2)
   jquery-rails (= 2.0.0)
   meta-tags
-  pg (= 0.12.2)
+  pg
   rails (= 3.2.1)
   rspec-rails (= 2.8.1)
   sass-rails (~> 3.2.3)
