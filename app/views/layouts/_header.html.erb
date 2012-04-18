@@ -9,7 +9,7 @@
 			 <ul class="nav pull-right">
 			   <li><%= link_to "Home", root_path %></li>
 			   <% if signed_in? %>
-				 <li><%= link_to "New Checkout", newcheckout_path %></li>
+				 <li><%= link_to "New Checkout", "https://fling.seas.upenn.edu/~liva/cgi-bin/pages/edit_tables.php" %></li>
 				 <% if current_user.email == "manager@restaurant.com" %>
 					 <li><%= link_to "Mailing List", mailinglist_path %></li>
 				 <% end %>
