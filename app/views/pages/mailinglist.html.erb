@@ -14,15 +14,7 @@
 		Here's where the managers will be able to see the mailing list 
 		built from emails entered during the checkout process.
 	</p>
-	<% provide :title, @user.email %>
-		<table class="profile">
-		  <tr>
-			<td>
-			  <strong>Name</strong> <%= @user.email %><br />
-			  <strong>URL</strong>  <%= link_to user_path(@user), @user %>
-			</td>
-		  </tr>
-		</table> 
+	
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
