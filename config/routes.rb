@@ -3,6 +3,7 @@ SampleApp::Application.routes.draw do
   resources :items
 
   get "items/new"
+  get "users/new"
   get "customers/new"
   get "customers/show"
 
@@ -14,7 +15,8 @@ SampleApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
-  match '/signup',  to: 'users#new'
+  match '/newcustomer',  to: 'customers#new'
+  match '/newmanager', to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy'
   
