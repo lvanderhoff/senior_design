@@ -24,9 +24,9 @@ test:
 #   pool: 5
 #   timeout: 5000
 
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: note_taker_development
-  username: postgres
-  password: "#{ENV['POSTGRESQL_PASSWORD']}"
+# development:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: note_taker_development
+#   username: postgres
+#   password: "#{ENV['POSTGRESQL_PASSWORD']}"

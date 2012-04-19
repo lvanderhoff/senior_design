@@ -4,17 +4,12 @@ SampleApp::Application.routes.draw do
 
   get "items/new"
   get "customers/new"
+  get "customers/show"
 
   get "pages/home"
   get "pages/newcheckout"
   get "pages/mailinglist"
-  get "pages/bill"
-  get "pages/payment"
-  get "pages/processed"
-  get "pages/credittotal"
-  get "pages/spliteven"
-  get "pages/remaining"
-  get "pages/choose"
+
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -27,13 +22,7 @@ SampleApp::Application.routes.draw do
   match '/newcheckout', :to => 'pages#newcheckout'
   match '/mailinglist', :to => 'pages#mailinglist'
   
-  match '/bill', :to => 'pages#bill'
-  match '/payment', :to =>  'pages#payment'
-  match '/processed', :to =>  'pages#processed'
-  match '/credittotal', :to =>  'pages#credittotal'
-  match '/spliteven', :to =>  'pages#spliteven'
-  match '/remaining', :to =>  'pages#remaining'
-  match '/choose', :to =>  'pages#choose'
+
   
   
   

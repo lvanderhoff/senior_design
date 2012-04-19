@@ -9,12 +9,9 @@
   </head>
  <body>
     <%= render 'layouts/header' %>
-    <p>
-  		<center>This is the homepage for restaurant employees. </center>
-  		<br><br>
-		<center>Interested in bringing PayFast to your restaurant? <br>
-		<%= link_to "Sign up here!", signup_path, :class => "btn" %> </center>
-	</p>
+    <p><center>
+  		Welcome to your PayFast homebase! 
+	</p></center>
     <div class="container-fluid">
       <%= yield %>
       <%= render 'layouts/footer' %>
